@@ -60,8 +60,8 @@
         name: docker-compose
        
     # git clone photoshare branch: standalone
-     - git:
-         repo: https://github.com/alexfrt/photoshare.git
-         dest: /src/photoshare
-         version: standalone
+    - git:
+        repo: https://github.com/alexfrt/photoshare.git
+        dest: /src/photoshare
+        version: standalone
 
