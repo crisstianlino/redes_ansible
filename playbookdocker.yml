@@ -54,7 +54,7 @@
         state: present
       with_sequence: count={{ create_containers }}
       
-    # sudo apt-get install docker-compose=3.5.*
+    # pip install docker-compose
     - name: Install docker-compose
       pip:
         name: docker-compose
