@@ -6,7 +6,7 @@
 ###########################################################################################################################
 
 ---
-- hosts: all
+- hosts: server1
   become: true
   vars:
     create_containers: 4
@@ -53,3 +53,11 @@
         command: "{{ default_container_command }}"
         state: present
       with_sequence: count={{ create_containers }}
+      
+    # sudo apt-get install docker-compose=3.5.*
+    - name: Install docker-compose
+      apt:
+        name: docker-compose=3.5.*
+        state: present
+        update_cache: yes
+
