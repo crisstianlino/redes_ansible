@@ -56,8 +56,6 @@
       
     # sudo apt-get install docker-compose=3.5.*
     - name: Install docker-compose
-      apt:
-        name: docker-compose=3.5.*
-        state: present
-        update_cache: yes
+      pip:
+        name: docker-compose
 
